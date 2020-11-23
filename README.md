@@ -16,9 +16,15 @@ Looking at the recent trends and the most powerful weapon with the humanity - te
 
 ## :label: Tech Stack
    * Flutter
+   * Java
+   * Kotlin
+   * Swift
    * Firestore
    * Google Map Api
-   * Crimometer Api 
+   * Crimometer Api
+   * Android Studio
+   * VS Code
+   * Git
    
 ## :label: Features
 
