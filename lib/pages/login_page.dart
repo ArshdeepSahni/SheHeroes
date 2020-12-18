@@ -87,15 +87,20 @@ class _LoginPageState extends State<LoginPage>
         child: SingleChildScrollView(
           child: Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height >= 775.0
+            height: MediaQuery.of(context).size.height >= 800.0
                 ? MediaQuery.of(context).size.height
-                : 775.0,
-            decoration: new BoxDecoration(color: bg
-                // begin: const FractionalOffset(0.0, 0.0),
-                // end: const FractionalOffset(1.0, 1.0),
-                // stops: [0.0, 1.0],
-                // tileMode: TileMode.clamp),
-                ),
+                : 800.0,
+            decoration: new BoxDecoration(
+              gradient: RadialGradient(
+                  colors: [HexColor('#FFC3CF'), HexColor('#F7BB97')],
+                  // begin: Alignment.topLeft,
+                  // end: Alignment.bottomRight
+                  radius: 1.5),
+              // begin: const FractionalOffset(0.0, 0.0),
+              // end: const FractionalOffset(1.0, 1.0),
+              // stops: [0.0, 1.0],
+              // tileMode: TileMode.clamp),
+            ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
@@ -123,22 +128,15 @@ class _LoginPageState extends State<LoginPage>
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: ScaleAnimatedTextKit(
-                          onTap: () {
-                            print("Tap Event");
-                          },
-                          text: [
-                            "SheHeroes",
-                          ],
-                          textStyle: TextStyle(
-                              fontSize: 30.0,
-                              fontFamily: "Canterbury",
-                              color: HexColor("#ea6a88"),
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.start,
-                          alignment: AlignmentDirectional
-                              .topStart // or Alignment.topLeft
-                          ),
+                      child: Text(
+                        'SheHeroes',
+                        style: TextStyle(
+                            fontSize: 30.0,
+                            fontFamily: "Canterbury",
+                            color: HexColor("#ea6a88"),
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.start,
+                      ),
                     ),
                   ],
                 ),
@@ -445,7 +443,7 @@ class _LoginPageState extends State<LoginPage>
 
   Widget _buildSignUp(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 23.0),
+      margin: EdgeInsets.only(top: 20.0),
       child: Column(
         children: <Widget>[
           Stack(

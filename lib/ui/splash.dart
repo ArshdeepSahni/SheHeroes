@@ -49,22 +49,15 @@ class _SplashState extends State<Splash> {
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
-              child: ScaleAnimatedTextKit(
-                  onTap: () {
-                    print("Tap Event");
-                  },
-                  text: [
-                    "SheHeroes",
-                  ],
-                  textStyle: TextStyle(
-                      fontSize: 30.0,
-                      fontFamily: "Canterbury",
-                      color: HexColor("#ea6a88"),
-                      fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.start,
-                  alignment:
-                      AlignmentDirectional.topStart // or Alignment.topLeft
-                  ),
+              child: Text(
+                'SheHeroes',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontFamily: "Canterbury",
+                    color: HexColor("#ea6a88"),
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.start,
+              ),
             ),
           ],
         ),
